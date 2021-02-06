@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Free Twitter Follower",
+  "short_name": "Free Twitter Follower",
+  "description": "This extension enables you to follow accounts on the page automatically.",
+  "version": "1.0.0",
+  "author": "PSIXs",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Free Twitter Follower"
+  },
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon128.png",
+    "128": "icon128.png" 
+  },
+  "content_scripts":[
+    {
+      "matches": [ "*://*.twitter.com/*" ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions":["*://*.twitter.com/*"]
+}
