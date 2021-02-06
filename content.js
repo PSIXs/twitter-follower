@@ -3,10 +3,6 @@ const sleep = (seconds) => new Promise(proceed => {
   setTimeout(proceed, seconds * 1000);
 });
 
-const onlyUnique = (value, index, self) => {
-  return self.indexOf(value) === index;
-}
-
 const followAll = async () => {
   const $followButtons = '[data-testid$="-follow"]';
   let followButtons = Array.from(this.document.querySelectorAll($followButtons));
